@@ -1,6 +1,7 @@
 .colorContainer{
   background: black;
   display: flex;
+  height: 10vh;
 }
 
 .links{
