@@ -1,0 +1,18 @@
+.colorContainer{
+  background: black;
+  display: flex;
+}
+
+.links{
+  list-style: none;
+  display: flex;
+  color: white;
+}
+
+.text{
+  color: white;
+}
+a{
+  color: #fff;
+  text-decoration: none;
+}
