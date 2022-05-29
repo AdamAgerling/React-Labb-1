@@ -2,16 +2,24 @@
   background: black;
   display: flex;
   height: 10vh;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: row;
+
 }
 
 .links{
   list-style: none;
   display: flex;
   color: white;
+  display: flex;
+  flex-direction: column;
+
 }
 
 .text{
   color: white;
+
 }
 a{
   color: #fff;
