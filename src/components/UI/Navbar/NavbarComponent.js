@@ -14,8 +14,7 @@ const NavbarComponent = () => {
             <Link to="/valorant-API">Valorant API</Link>
           </li>
         )}
-
-        <h1 className={styles.text}>Testpage</h1>
+        <h1 className={styles.text}>A meaningless webpage</h1>
 
         {ctx.isLoggedIn && (
           <li className={styles.links}>
@@ -24,7 +23,9 @@ const NavbarComponent = () => {
         )}
         {ctx.isLoggedIn && (
           <li className={styles.links}>
-            <button onClick={ctx.onLogout}>Logout</button>
+            <button className={styles.btn} onClick={ctx.onLogout}>
+              Logout
+            </button>
           </li>
         )}
       </ul>

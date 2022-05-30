@@ -100,35 +100,37 @@ const Login = () => {
   };
 
   return (
-    <Card className={styles.login}>
-      <form onSubmit={submitHandler}>
-        <Input
-          ref={emailInputRef}
-          id="email"
-          label="E-mail"
-          type="email"
-          isValid={emailIsValid}
-          value={emailState.value}
-          onChange={emailChangeHandler}
-          onBlur={validateEmailHandler}
-        />
-        <Input
-          ref={passwordInputRef}
-          id="password"
-          label="Password"
-          type="password"
-          isValid={passwordIsValid}
-          value={passwordState.value}
-          onChange={passwordChangeHandler}
-          onBlur={validatePasswordHandler}
-        />
-        <div className={styles.actions}>
-          <Button type="submit" className={styles.btn}>
-            <Link to="/welcome">Log in för helvete</Link>
-          </Button>
-        </div>
-      </form>
-    </Card>
+    <div className={styles.windowHeight}>
+      <Card className={styles.login}>
+        <form onSubmit={submitHandler}>
+          <Input
+            ref={emailInputRef}
+            id="email"
+            label="E-mail"
+            type="email"
+            isValid={emailIsValid}
+            value={emailState.value}
+            onChange={emailChangeHandler}
+            onBlur={validateEmailHandler}
+          />
+          <Input
+            ref={passwordInputRef}
+            id="password"
+            label="Password"
+            type="password"
+            isValid={passwordIsValid}
+            value={passwordState.value}
+            onChange={passwordChangeHandler}
+            onBlur={validatePasswordHandler}
+          />
+          <div className={styles.actions}>
+            <Button type="submit" className={styles.btn}>
+              <Link to="/welcome">Log in för helvete</Link>
+            </Button>
+          </div>
+        </form>
+      </Card>
+    </div>
   );
 };
 

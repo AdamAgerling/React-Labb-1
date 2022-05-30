@@ -3,8 +3,9 @@
   grid-template-columns: auto auto auto;
   text-align: center;
   list-style: none;
+  flex-wrap: wrap;
 }
 
 img{
-  width: 200px
+  width: 200px;
 }
