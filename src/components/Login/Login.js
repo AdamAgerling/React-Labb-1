@@ -1,6 +1,3 @@
-// TODO
-// FUXA LINK SKITEN, PRATA MED JON PÅ TISDAG OM DET INTE LÖSES INNAN.
-
 import React, {
   useState,
   useEffect,
@@ -8,7 +5,8 @@ import React, {
   useContext,
   useRef,
 } from 'react';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router';
+
 import Button from '../UI/Button/Button';
 import Input from '../UI/Input/Input';
 import Card from '../UI/Card/Card';
@@ -88,7 +86,20 @@ const Login = () => {
     dispatchPassword({ type: 'INPUT_BLUR' });
   };
 
-  const submitHandler = (event) => {
+  // const submitHandler = (event) => {
+  //   event.preventDefault();
+  //   if (loginIsValid) {
+  //     authCtx.onLogin(emailState.value, passwordState.value);
+  //   } else if (!emailIsValid) {
+  //     emailInputRef.current.focus();
+  //   } else {
+  //     passwordInputRef.current.focus();
+  //   }
+  // };
+
+  let navigate = useNavigate();
+
+  function submithandler(event) {
     event.preventDefault();
     if (loginIsValid) {
       authCtx.onLogin(emailState.value, passwordState.value);
@@ -97,12 +108,13 @@ const Login = () => {
     } else {
       passwordInputRef.current.focus();
     }
-  };
+    navigate('./welcome');
+  }
 
   return (
     <div className={styles.windowHeight}>
       <Card className={styles.login}>
-        <form onSubmit={submitHandler}>
+        <form onSubmit={submithandler}>
           <Input
             ref={emailInputRef}
             id="email"
@@ -125,7 +137,7 @@ const Login = () => {
           />
           <div className={styles.actions}>
             <Button type="submit" className={styles.btn}>
-              <Link to="/welcome">Log in för helvete</Link>
+              Log in
             </Button>
           </div>
         </form>
