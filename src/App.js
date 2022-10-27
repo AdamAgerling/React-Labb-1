@@ -9,7 +9,8 @@ import FooterComponent from './components/UI/Footer/FooterComponent';
 import AuthContext from './store/Authentication-Context';
 import Welcome from './components/Login/Welcome';
 import ValoFetch from './components/FetchValorant/ValoTest';
-
+import LogRocket from 'logrocket';
+LogRocket.init('mxqbv6/test-projekt');
 function App() {
   const ctx = useContext(AuthContext);
   return (
