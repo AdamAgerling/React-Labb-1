@@ -9,17 +9,9 @@ import FooterComponent from './components/UI/Footer/FooterComponent';
 import AuthContext from './store/Authentication-Context';
 import Welcome from './components/Login/Welcome';
 import ValoFetch from './components/FetchValorant/ValoTest';
-import LogRocket from 'logrocket';
-LogRocket.init('mxqbv6/test-projekt');
+
 function App() {
   const ctx = useContext(AuthContext);
-
-  LogRocket.identify('THE_USER_ID_IN_YOUR_APP', {
-    name: 'Fredrik Bengtorg',
-    email: 'Nathi.Calle@Mahdi.com',
-
-    subscriptionType: 'poor',
-  });
 
   return (
     <React.Fragment>
