@@ -10,7 +10,7 @@ const FooterComponent = () => {
       </div>
 
       <p className={styles.center}>
-        A massive footer that absolutely serves no purpose
+        A massive footer that absolutely serves no purpose, Edited for vercel:)
       </p>
     </footer>
   );

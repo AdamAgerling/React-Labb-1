@@ -86,17 +86,6 @@ const Login = () => {
     dispatchPassword({ type: 'INPUT_BLUR' });
   };
 
-  // const submitHandler = (event) => {
-  //   event.preventDefault();
-  //   if (loginIsValid) {
-  //     authCtx.onLogin(emailState.value, passwordState.value);
-  //   } else if (!emailIsValid) {
-  //     emailInputRef.current.focus();
-  //   } else {
-  //     passwordInputRef.current.focus();
-  //   }
-  // };
-
   let navigate = useNavigate();
 
   function submithandler(event) {
